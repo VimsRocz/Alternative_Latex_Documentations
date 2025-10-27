@@ -1,0 +1,106 @@
+## Core LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Intermediate documents
+*.dvi
+*.xdv
+*-converted-to.*
+
+## Bibliography auxiliary files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+## Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+## Build tool directories
+/latex.out/
+
+## Auxiliary and intermediate files from other packages
+*.glo
+*.gls
+*.glg
+*.ist
+*.idx
+*.ilg
+*.ind
+*.nav
+*.snm
+*.vrb
+
+## Listings package
+*.lol
+
+## Multicolumn layout packages
+*.cut
+
+## Hyperref
+*.brf
+
+## Knitr
+*-concordance.tex
+
+## pythontex
+*.pytxcode
+pythontex-files-*/
+
+## todonotes
+*.tdo
+
+## Xindy
+*.xdy
+
+## Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+## Editor backup files
+*.swp
+*.swo
+*~
+.#*
+\#*#
+
+## Distribution / packaging
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+
+## IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+## Temporary files
+tmp/
+temp/
+*.tmp

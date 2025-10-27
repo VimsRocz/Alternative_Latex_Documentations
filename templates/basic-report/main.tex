@@ -1,0 +1,207 @@
+\documentclass[12pt, a4paper]{article}
+
+% ============================================
+% PACKAGE IMPORTS
+% ============================================
+
+% Encoding and language
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+% Page layout
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Typography
+\usepackage{setspace}
+\onehalfspacing
+
+% Graphics and figures
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{images/}}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{multirow}
+
+% Math
+\usepackage{amsmath, amssymb, amsthm}
+
+% Colors
+\usepackage{xcolor}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    citecolor=blue
+}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{\leftmark}
+
+% Bibliography
+\usepackage[style=numeric, sorting=none]{biblatex}
+\addbibresource{references.bib}
+
+% ============================================
+% DOCUMENT INFORMATION
+% ============================================
+
+\title{Your Report Title Here}
+\author{Your Name\\
+        \texttt{your.email@example.com}}
+\date{\today}
+
+% ============================================
+% DOCUMENT CONTENT
+% ============================================
+
+\begin{document}
+
+% Title page
+\maketitle
+\thispagestyle{empty}
+
+% Abstract
+\begin{abstract}
+    This is the abstract of your report. It should provide a brief overview of the main points, 
+    findings, and conclusions of your work. Keep it concise and informative, typically 
+    150-250 words.
+\end{abstract}
+
+\newpage
+
+% Table of contents
+\tableofcontents
+\newpage
+
+% ============================================
+% MAIN CONTENT
+% ============================================
+
+\section{Introduction}
+\label{sec:introduction}
+
+This is the introduction section. Here you should:
+\begin{itemize}
+    \item Introduce the topic and provide background information
+    \item State the purpose and objectives of the report
+    \item Outline the structure of the document
+\end{itemize}
+
+You can reference other sections like Section~\ref{sec:methodology}.
+
+\section{Methodology}
+\label{sec:methodology}
+
+Describe the methods and approaches used in your work. This section might include:
+
+\subsection{Research Design}
+Explain the overall research design and approach.
+
+\subsection{Data Collection}
+Detail how data was collected or what sources were used.
+
+\subsection{Analysis Methods}
+Describe the analytical methods or tools employed.
+
+\section{Results}
+\label{sec:results}
+
+Present your findings here. You can include:
+
+\subsection{Tables}
+
+Example table:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Item} & \textbf{Value 1} & \textbf{Value 2} \\
+        \midrule
+        Sample A & 10.5 & 12.3 \\
+        Sample B & 8.7 & 9.1 \\
+        Sample C & 15.2 & 14.8 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Example table showing sample data.}
+    \label{tab:example}
+\end{table}
+
+\subsection{Figures}
+
+Example figure reference (uncomment when you have images):
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{example-image}
+%     \caption{Example figure caption.}
+%     \label{fig:example}
+% \end{figure}
+
+\subsection{Mathematical Equations}
+
+You can include equations:
+\begin{equation}
+    E = mc^2
+    \label{eq:einstein}
+\end{equation}
+
+Where $E$ is energy, $m$ is mass, and $c$ is the speed of light.
+
+\section{Discussion}
+\label{sec:discussion}
+
+Interpret and discuss your results. Consider:
+\begin{itemize}
+    \item What do the results mean?
+    \item How do they relate to existing knowledge?
+    \item What are the implications?
+    \item What are the limitations?
+\end{itemize}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Summarize the main findings and their significance. Include:
+\begin{itemize}
+    \item Brief recap of objectives
+    \item Summary of key findings
+    \item Final thoughts and recommendations
+    \item Suggestions for future work
+\end{itemize}
+
+% ============================================
+% BIBLIOGRAPHY
+% ============================================
+
+\newpage
+\printbibliography[heading=bibintoc, title={References}]
+
+% ============================================
+% APPENDICES (Optional)
+% ============================================
+
+\newpage
+\appendix
+
+\section{Additional Data}
+\label{app:additional-data}
+
+Any supplementary information, additional tables, or detailed calculations can go here.
+
+\section{Code Listings}
+\label{app:code}
+
+If you need to include code or technical details, place them in appendices.
+
+\end{document}
