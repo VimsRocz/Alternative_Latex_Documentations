@@ -1,0 +1,398 @@
+\documentclass[11pt,a4paper,oneside]{book}
+
+% ============================================
+% PACKAGE IMPORTS
+% ============================================
+
+% Encoding and language
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+% Page layout
+\usepackage[margin=1in]{geometry}
+
+% Line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{images/}}
+
+% Enhanced chapter headings
+\usepackage{titlesec}
+
+% Fancy headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% For quote environment
+\usepackage{csquotes}
+
+% Index
+\usepackage{makeidx}
+\makeindex
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Book Title},
+    pdfauthor={Author Name}
+}
+
+% Bibliography (optional)
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{references.bib}
+
+% ============================================
+% CUSTOM COMMANDS
+% ============================================
+
+% Epigraph (quote at beginning of chapter)
+\newcommand{\chapterquote}[2]{%
+    \begin{quotation}
+        \em #1
+        \begin{flushright}
+            --- #2
+        \end{flushright}
+    \end{quotation}
+}
+
+% ============================================
+% DOCUMENT INFORMATION
+% ============================================
+
+\title{Book Title}
+\author{Author Name}
+\date{2024}
+
+% ============================================
+% DOCUMENT CONTENT
+% ============================================
+
+\begin{document}
+
+% ============================================
+% TITLE PAGE
+% ============================================
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    % Title
+    {\Huge\bfseries Book Title\\[0.5cm]}
+    {\Large Subtitle (if applicable)\\[2cm]}
+    
+    % Author
+    {\Large\textsc{Author Name}\\[1.5cm]}
+    
+    \vfill
+    
+    % Publisher or additional info
+    {\large Publisher Name\\
+    City\\
+    2024}
+\end{titlepage}
+
+% ============================================
+% COPYRIGHT PAGE
+% ============================================
+
+\newpage
+\thispagestyle{empty}
+\null
+\vfill
+
+\noindent
+\textbf{Book Title}\\
+\textit{by Author Name}
+
+\vspace{1cm}
+
+\noindent
+Copyright \copyright~2024 by Author Name
+
+\vspace{0.5cm}
+
+\noindent
+All rights reserved. No part of this publication may be reproduced, distributed, 
+or transmitted in any form or by any means, including photocopying, recording, 
+or other electronic or mechanical methods, without the prior written permission 
+of the publisher, except in the case of brief quotations embodied in critical 
+reviews and certain other noncommercial uses permitted by copyright law.
+
+\vspace{1cm}
+
+\noindent
+ISBN: 978-X-XXXX-XXXX-X (Paperback)\\
+ISBN: 978-X-XXXX-XXXX-X (eBook)
+
+\vspace{1cm}
+
+\noindent
+First Edition
+
+\vspace{1cm}
+
+\noindent
+Publisher Name\\
+Street Address\\
+City, State ZIP\\
+Country\\
+www.publisher-website.com
+
+% ============================================
+% FRONT MATTER
+% ============================================
+
+\frontmatter
+
+% Dedication
+\chapter*{Dedication}
+\addcontentsline{toc}{chapter}{Dedication}
+
+\vspace{2cm}
+\begin{center}
+    \textit{To those who inspired this work}
+\end{center}
+
+% Epigraph (optional opening quote)
+\cleardoublepage
+\thispagestyle{empty}
+\vspace*{5cm}
+\begin{center}
+    \Large\textit{``An inspiring quote that sets the tone for your book.''}\\[1cm]
+    \normalsize --- Quote Author
+\end{center}
+
+% Table of Contents
+\tableofcontents
+
+% List of Figures (optional)
+\listoffigures
+
+% List of Tables (optional)
+\listoftables
+
+% Preface
+\chapter{Preface}
+
+This is the preface where you can explain:
+\begin{itemize}
+    \item The purpose and scope of the book
+    \item Who the intended audience is
+    \item How the book is organized
+    \item What makes this book unique
+    \item Acknowledgments (or put in separate section)
+\end{itemize}
+
+% Acknowledgments (optional - can be combined with Preface)
+\chapter{Acknowledgments}
+
+Here you thank people who helped make this book possible:
+\begin{itemize}
+    \item Mentors and advisors
+    \item Family and friends
+    \item Colleagues and collaborators
+    \item Editors and reviewers
+    \item Funding sources
+\end{itemize}
+
+% ============================================
+% MAIN MATTER
+% ============================================
+
+\mainmatter
+
+% Part I (optional - for organizing chapters into parts)
+\part{First Part Title}
+
+% Chapter 1
+\chapter{Introduction}
+\label{chap:intro}
+
+% Optional chapter quote
+\chapterquote{A relevant quote to introduce the chapter theme.}{Quote Author}
+
+This is the first chapter of your book. It should introduce the main topics 
+and themes that will be explored throughout the book.
+
+\section{Background}
+\label{sec:background}
+
+Provide context and background information.
+
+\section{Objectives}
+\label{sec:objectives}
+
+Explain what the book aims to achieve.
+
+\section{Organization of This Book}
+\label{sec:organization}
+
+Briefly describe what each chapter covers.
+
+% Chapter 2
+\chapter{Second Chapter Title}
+\label{chap:second}
+
+\chapterquote{Another relevant quote for this chapter.}{Quote Author}
+
+Content of the second chapter. You can include:
+\begin{itemize}
+    \item Text paragraphs
+    \item Lists and enumerations
+    \item Figures and tables
+    \item Code examples
+    \item Mathematical equations
+\end{itemize}
+
+\section{First Topic}
+\label{sec:topic1}
+
+Discuss the first major topic of this chapter.
+
+\subsection{Subtopic}
+\label{subsec:subtopic}
+
+Break down complex topics into subsections.
+
+\section{Second Topic}
+\label{sec:topic2}
+
+Continue with additional topics.
+
+% Chapter 3
+\chapter{Third Chapter Title}
+\label{chap:third}
+
+Each chapter should focus on a specific aspect of your book's subject matter.
+
+\section{Figures Example}
+\label{sec:figures}
+
+You can include figures like this:
+
+\begin{figure}[h]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{example-figure}
+    \caption{Caption describing the figure.}
+    \label{fig:example}
+\end{figure}
+
+Reference figures in text: see Figure~\ref{fig:example}.
+
+\section{Tables Example}
+\label{sec:tables}
+
+Tables can be created like this:
+
+\begin{table}[h]
+    \centering
+    \caption{Example table showing data.}
+    \label{tab:example}
+    \begin{tabular}{lcc}
+        \hline
+        \textbf{Item} & \textbf{Value 1} & \textbf{Value 2} \\
+        \hline
+        Sample A & 10 & 20 \\
+        Sample B & 15 & 25 \\
+        Sample C & 20 & 30 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+% Part II (if using parts)
+\part{Second Part Title}
+
+% Chapter 4
+\chapter{Fourth Chapter Title}
+\label{chap:fourth}
+
+Continue with more chapters as needed for your book structure.
+
+% Chapter 5
+\chapter{Fifth Chapter Title}
+\label{chap:fifth}
+
+Add as many chapters as your book requires.
+
+% Chapter 6 - Conclusion
+\chapter{Conclusion}
+\label{chap:conclusion}
+
+Summarize the key points covered in the book and provide final thoughts.
+
+\section{Summary}
+\label{sec:summary}
+
+Recap the main themes and findings.
+
+\section{Final Thoughts}
+\label{sec:final}
+
+Leave readers with closing remarks and suggestions for further exploration.
+
+% ============================================
+% BACK MATTER
+% ============================================
+
+\backmatter
+
+% Appendices
+\appendix
+
+\chapter{Additional Resources}
+\label{app:resources}
+
+Include supplementary material such as:
+\begin{itemize}
+    \item Further reading recommendations
+    \item Useful websites and resources
+    \item Tools and software
+    \item Extended examples
+\end{itemize}
+
+\chapter{Glossary}
+\label{app:glossary}
+
+Define technical terms and concepts used throughout the book.
+
+\begin{description}
+    \item[Term 1] Definition of term 1
+    \item[Term 2] Definition of term 2
+    \item[Term 3] Definition of term 3
+\end{description}
+
+% Bibliography (optional)
+\printbibliography[heading=bibintoc, title={References and Further Reading}]
+
+% Index
+\printindex
+
+% About the Author
+\chapter*{About the Author}
+\addcontentsline{toc}{chapter}{About the Author}
+
+Brief biography of the author, including:
+\begin{itemize}
+    \item Professional background
+    \item Academic credentials
+    \item Previous publications
+    \item Current work
+    \item Contact information or website
+\end{itemize}
+
+\end{document}
