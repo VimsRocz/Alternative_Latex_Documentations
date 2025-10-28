@@ -1,0 +1,227 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% ============================================
+% MODERNCV THEME
+% ============================================
+
+% Style: 'casual', 'classic', 'banking', 'oldstyle', 'fancy'
+\moderncvstyle{banking}
+
+% Color: 'blue', 'orange', 'green', 'red', 'purple', 'grey', 'black'
+\moderncvcolor{blue}
+
+% ============================================
+% CHARACTER ENCODING
+% ============================================
+
+\usepackage[utf8]{inputenc}
+
+% ============================================
+% PAGE LAYOUT
+% ============================================
+
+\usepackage[scale=0.85]{geometry}
+% \setlength{\hintscolumnwidth}{3cm}  % Width of the timeline on the left
+
+% ============================================
+% PERSONAL INFORMATION
+% ============================================
+
+\name{First Name}{Last Name}
+\title{Professional Title / Position}
+\address{Street Address}{City, State ZIP}{Country}
+\phone[mobile]{+1~(234)~567~8900}
+\phone[fixed]{+1~(234)~567~8901}
+\email{your.email@example.com}
+\homepage{www.yourwebsite.com}
+\social[linkedin]{yourlinkedin}
+\social[github]{yourgithub}
+\social[twitter]{yourtwitter}
+% \extrainfo{additional information}
+\photo[70pt][0.4pt]{picture}  % '70pt' is the height, '0.4pt' is the frame thickness
+\quote{Professional tagline or career objective}
+
+% ============================================
+% CONTENT
+% ============================================
+
+\begin{document}
+
+% ============================================
+% RESUME / CV
+% ============================================
+
+\makecvtitle
+
+% ============================================
+% EDUCATION
+% ============================================
+
+\section{Education}
+
+\cventry{2018--2022}{Degree}{University Name}{City, Country}{Grade/GPA}{
+    Description of your degree, major achievements, relevant coursework, or thesis topic.
+    \begin{itemize}
+        \item Key achievement or relevant coursework 1
+        \item Key achievement or relevant coursework 2
+        \item Thesis: "Title of Your Thesis"
+    \end{itemize}
+}
+
+\cventry{2014--2018}{Previous Degree}{Institution Name}{City, Country}{Grade}{
+    Brief description of this degree.
+}
+
+% ============================================
+% EXPERIENCE
+% ============================================
+
+\section{Experience}
+
+\cventry{2022--Present}{Job Title}{Company Name}{City, Country}{}{
+    Description of your role and responsibilities.
+    \begin{itemize}
+        \item Key achievement or responsibility 1 - quantify impact where possible
+        \item Key achievement or responsibility 2 - use action verbs
+        \item Key achievement or responsibility 3 - highlight leadership and collaboration
+        \item Technologies/tools used: Python, SQL, Docker, etc.
+    \end{itemize}
+}
+
+\cventry{2020--2022}{Previous Job Title}{Previous Company}{City, Country}{}{
+    Description of this role.
+    \begin{itemize}
+        \item Achievement with measurable outcome (e.g., "Increased efficiency by 30\%")
+        \item Project leadership or team collaboration example
+        \item Technical skills demonstrated
+    \end{itemize}
+}
+
+\cventry{Summer 2019}{Internship Position}{Company Name}{City, Country}{}{
+    Brief description of internship experience.
+    \begin{itemize}
+        \item Key project or contribution
+        \item Skills developed
+    \end{itemize}
+}
+
+% ============================================
+% SKILLS
+% ============================================
+
+\section{Skills}
+
+\cvitem{Programming}{Python, Java, C++, JavaScript, SQL}
+\cvitem{Web Development}{HTML, CSS, React, Node.js, Django}
+\cvitem{Data Science}{Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch}
+\cvitem{Tools}{Git, Docker, Kubernetes, AWS, Linux}
+\cvitem{Languages}{English (Native), Spanish (Fluent), French (Intermediate)}
+\cvitem{Soft Skills}{Leadership, Team Collaboration, Problem Solving, Communication}
+
+% Alternative format using cvdoubleitem
+% \cvdoubleitem{Category 1}{Item 1, Item 2}{Category 2}{Item 3, Item 4}
+
+% ============================================
+% PROJECTS (Optional)
+% ============================================
+
+\section{Projects}
+
+\cvitem{Project Name}{\textbf{Description:} Brief description of the project and your role.\\
+    \textbf{Technologies:} List of technologies used.\\
+    \textbf{Link:} \url{https://github.com/username/project}}
+
+\cvitem{Another Project}{\textbf{Description:} What the project does and why it's significant.\\
+    \textbf{Impact:} Quantify the impact (e.g., "Used by 1000+ users").\\
+    \textbf{Link:} \url{https://project-website.com}}
+
+% ============================================
+% PUBLICATIONS (Optional)
+% ============================================
+
+\section{Publications}
+
+\cvitem{}{Author Name, \textit{Paper Title}, Conference/Journal Name, Year. DOI: xxx}
+\cvitem{}{Author Name et al., \textit{Another Paper Title}, Conference/Journal Name, Year.}
+
+% ============================================
+% AWARDS & HONORS (Optional)
+% ============================================
+
+\section{Awards \& Honors}
+
+\cvitem{2023}{Award Name - Description of the award and its significance}
+\cvitem{2022}{Scholarship Name - Brief description}
+\cvitem{2021}{Competition Winner - Name of competition or honor}
+
+% ============================================
+% CERTIFICATIONS (Optional)
+% ============================================
+
+\section{Certifications}
+
+\cvitem{2023}{Certification Name - Issuing Organization}
+\cvitem{2022}{Professional Certificate - Platform/Institution}
+
+% ============================================
+% VOLUNTEER EXPERIENCE (Optional)
+% ============================================
+
+\section{Volunteer Experience}
+
+\cventry{2021--Present}{Volunteer Role}{Organization Name}{City, Country}{}{
+    Description of volunteer work and impact.
+    \begin{itemize}
+        \item Key contribution or achievement
+        \item Skills applied or developed
+    \end{itemize}
+}
+
+% ============================================
+% INTERESTS (Optional)
+% ============================================
+
+\section{Interests}
+
+\cvitem{Professional}{Machine Learning, Open Source, Software Architecture}
+\cvitem{Personal}{Photography, Hiking, Reading, Playing Guitar}
+
+% ============================================
+% REFERENCES
+% ============================================
+
+\section{References}
+
+% Option 1: Available upon request
+\cvitem{}{Available upon request}
+
+% Option 2: Include specific references
+% \cventry{}{Reference Name}{Position}{Company}{Email}{Phone}
+% \cvitem{}{Dr. John Smith, Professor, University Name, john.smith@university.edu, +1-234-567-8900}
+
+% ============================================
+% COVER LETTER (Optional)
+% ============================================
+
+% Uncomment the following to create a cover letter
+% \clearpage
+% 
+% \recipient{HR Department}{Company Name\\Street Address\\City, State ZIP}
+% \date{\today}
+% \opening{Dear Hiring Manager,}
+% \closing{Sincerely,}
+% \enclosure[Attached]{curriculum vit\ae{}}
+% 
+% \makelettertitle
+% 
+% First paragraph: Introduce yourself and state the position you're applying for.
+% 
+% Second paragraph: Highlight your relevant experience and skills. Explain why you're 
+% a great fit for the position and the company.
+% 
+% Third paragraph: Express enthusiasm for the opportunity and mention that you'd like 
+% to discuss your qualifications further.
+% 
+% \makeletterclosing
+
+\end{document}
