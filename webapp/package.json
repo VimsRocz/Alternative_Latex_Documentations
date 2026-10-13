@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
     "assets": "texlyre-busytex download-assets public/core",
-    "build:render": "npm run assets && npm run build"
+    "build:render": "npm run assets && node scripts/prune.mjs && npm run build"
   },
   "dependencies": {
     "fflate": "^0.8.2",
