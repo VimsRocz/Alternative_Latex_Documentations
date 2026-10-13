@@ -1,0 +1,20 @@
+{
+  "name": "opentex-browser-editor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "assets": "texlyre-busytex download-assets public/core",
+    "build:render": "npm run assets && npm run build"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2",
+    "texlyre-busytex": "1.4.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.0"
+  }
+}
