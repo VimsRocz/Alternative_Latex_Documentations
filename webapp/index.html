@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="OpenTeX is a free, privacy-friendly LaTeX editor. Write, compile and download PDF documents in your browser.">
+<meta name="theme-color" content="#101827">
+<title>OpenTeX · Free LaTeX Workspace</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315253b'/%3E%3Ctext x='32' y='43' text-anchor='middle' fill='%2355e3cc' font-size='35' font-family='serif'%3ET%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<div id="app">
+<header class="topbar">
+  <a href="#" class="brand" aria-label="OpenTeX home"><span class="brand-mark">T<span>e</span>X</span><span class="brand-name">OpenTeX</span><span class="brand-sub">Community editor</span></a>
+  <div class="top-actions">
+    <span class="privacy-label"><span class="status-dot"></span> Browser-first · Free</span>
+    <a href="https://github.com/VimsRocz/Alternative_Latex_Documentations/tree/opentex-webapp/webapp" target="_blank" rel="noopener" class="link-button">Source ↗</a>
+    <button id="themeButton" class="icon-button" title="Toggle theme" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+<div class="mainbar">
+  <div class="project-title"><span class="folder-symbol">▤</span><input id="projectName" aria-label="Project name" value="My LaTeX project" maxlength="72"><span class="saved-label" id="savedLabel">Saved locally</span></div>
+  <div class="toolbar">
+    <label class="select-wrap"><span class="sr-only">Template</span><select id="templateSelect"><option value="">Templates</option><option value="article">Research article</option><option value="resume">CV / Resume</option><option value="thesis">Thesis starter</option><option value="beamer">Beamer slides</option><option value="letter">Letter</option></select></label>
+    <button id="importButton" class="tool-button" title="Import .tex files or ZIP project">↑ Import</button>
+    <input type="file" id="uploadInput" accept=".tex,.bib,.sty,.cls,.txt,.png,.jpg,.jpeg,.pdf,.zip" multiple hidden>
+    <button id="exportButton" class="tool-button">↓ Project ZIP</button>
+    <button id="downloadTexButton" class="tool-button">↓ .tex</button>
+    <button id="compileButton" class="primary-button"><span aria-hidden="true">▶</span> Compile PDF</button>
+  </div>
+</div>
+<div class="workspace">
+<aside class="sidebar">
+  <div class="section-head"><span>PROJECT FILES</span><button id="addFileButton" class="mini-button" title="Add a LaTeX file" aria-label="Add file">＋</button></div>
+  <div id="fileList" class="file-list"></div>
+  <div class="sidebar-bottom"><div class="tip-heading">✦ Quick start</div><p>Select a template, edit the LaTeX, and click <strong>Compile PDF</strong>. Your source stays in this browser.</p><div class="sidebar-links"><a href="https://www.overleaf.com/learn" target="_blank" rel="noopener">LaTeX guide ↗</a><a href="https://github.com/VimsRocz/Alternative_Latex_Documentations" target="_blank" rel="noopener">Templates ↗</a></div></div>
+</aside>
+<main class="editor-panel" aria-label="LaTeX source">
+ <div class="panel-header"><div class="panel-tab"><span class="code-icon">&lt;/&gt;</span><span id="activeFilename">main.tex</span><span class="tab-changed" id="changeIndicator">●</span></div><span class="panel-right">LaTeX source</span></div>
+ <div class="editor-body"><div class="line-gutter" id="lineGutter" aria-hidden="true">1</div><textarea id="sourceEditor" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" aria-label="LaTeX source code"></textarea></div>
+ <div class="editor-footer"><span id="editorStats">1 line</span><span>Tab inserts 2 spaces · Ctrl+Enter compiles</span></div>
+</main>
+<section class="preview-panel" aria-label="Compiled PDF preview">
+ <div class="panel-header preview-header">
+    <div class="preview-heading">PDF Preview <span class="preview-version">v0.1</span></div>
+    <div class="preview-actions">
+       <select id="engineSelect" aria-label="LaTeX compiler"><option value="pdflatex">pdfLaTeX</option><option value="xelatex">XeLaTeX</option><option value="lualatex">LuaLaTeX</option></select>
+       <button id="downloadPdfButton" class="mini-action" disabled>↓ PDF</button>
+       <button id="toggleLogsButton" class="mini-action">Logs</button>
+    </div>
+ </div>
+ <div id="previewStage" class="preview-stage"><div id="emptyPreview" class="empty-preview"><div class="sheet-icon"><div class="sheet-lines"></div></div><h2>Your ideas, beautifully typeset.</h2><p>Write LaTeX on the left, compile, and see your PDF here. No account required.</p><button id="emptyCompileButton" class="secondary-cta">▶ Compile your first document</button></div><iframe id="pdfFrame" title="LaTeX PDF preview" hidden></iframe><pre id="logOutput" class="log-output" hidden></pre></div>
+ <div class="preview-footer"><span id="statusIcon" class="status-indicator">●</span><span id="statusText" role="status">Ready to compile</span><span class="foot-note">Powered by browser WebAssembly</span></div>
+</section>
+</div>
+<div id="toast" class="toast" role="alert" aria-live="polite"></div>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
